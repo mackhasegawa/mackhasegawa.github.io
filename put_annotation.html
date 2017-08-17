@@ -14,6 +14,9 @@ Y座標：<input type="text" id="txtY" /><br>
 <script type="text/javascript">
 <!--
   
+var fs = WScript.CreateObject("Scripting.FileSystemObject");
+var file = fs.OpenTextFile("log.txt", 8);
+
 window.onload=function(){
 	//マウス移動時のイベントをBODYタグに登録する
 	document.body.addEventListener("click", function(e){
@@ -31,8 +34,13 @@ window.onload=function(){
 		r = r.concat(",");
 		r = r.concat(document.getElementById("annotation").value);
 		document.getElementById("res").value = r;
+		r = r.concat("\n");
+		file.Write(r);
+		
 	});
 }
+
+file.Close();
   
   
 // -->
