@@ -14,13 +14,26 @@
 dd = new Date();
 document.write(dd.toLocaleString());
   
-document.body.addEventListener( "click", function( event ) {
-	var x = event.pageX ;
-	var y = event.pageY ;
-} ) ;
+window.onload=function(){
+  //マウス移動時のイベントをBODYタグに登録する
+  document.body.addEventListener("mousemove", function(e){
+ 
+    //座標を取得する
+    var mX = e.pageX;  //X座標
+    var mY = e.pageY;  //Y座標
+ 
+    //座標を表示する
+    document.getElementById("txtX").value = mX;
+    document.getElementById("txtY").value = mY;
+  });
+}
   
   
 // -->
 </script>
+	
+X座標：<input type="text" id="txtX" />
+Y座標：<input type="text" id="txtY" />
+	
 </body>
 </html>
