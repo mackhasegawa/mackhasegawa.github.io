@@ -14,12 +14,10 @@
 dd = new Date();
 document.write(dd.toLocaleString());
   
-document.onmousemove = function (e){
-	if(!e) e = window.event; // レガシー
-
-	// 出力テスト
-	console.log(e);
-};
+document.body.addEventListener( "click", function( event ) {
+	var x = event.pageX ;
+	var y = event.pageY ;
+} ) ;
   
   
 // -->
