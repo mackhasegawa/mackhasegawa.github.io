@@ -15,28 +15,23 @@ Y座標：<input type="text" id="txtY" /><br>
 <!--
   
 window.onload=function(){
-  //マウス移動時のイベントをBODYタグに登録する
-  document.body.addEventListener("click", function(e){
-
-	  // 座標のオフセット
-  var offsetX = 8;
-  var offsetY = 32;
-	  
-    //座標を取得する
-    var mX = e.pageX-offsetX;  //X座標
-    var mY = e.pageY-offsetY;  //Y座標
- 
-    //座標を表示する
-    document.getElementById("txtX").value = mX;
-    document.getElementById("txtY").value = mY;
-	  
-	  var r = mX.toString().concat(",");
-	  r = r.concat(mY.toString());
-	  r = r.concat(",");
-	  r = r.concat(document.getElementById("annotation").value);
-	  document.getElementById("res").value = r;
-	  
-  });
+	//マウス移動時のイベントをBODYタグに登録する
+	document.body.addEventListener("click", function(e){
+		// 座標のオフセット
+		var offsetX = 8;
+		var offsetY = 32;
+		//座標を取得する
+		var mX = e.pageX-offsetX;  //X座標
+		var mY = e.pageY-offsetY;  //Y座標
+		//座標を表示する
+		document.getElementById("txtX").value = mX;
+		document.getElementById("txtY").value = mY;
+		var r = mX.toString().concat(",");
+		r = r.concat(mY.toString());
+		r = r.concat(",");
+		r = r.concat(document.getElementById("annotation").value);
+		document.getElementById("res").value = r;
+	});
 }
   
   
