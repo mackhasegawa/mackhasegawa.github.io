@@ -15,9 +15,9 @@
 <!--
 	while(true){
 		document.getElementById("fusen").value = "付箋データ";
-		document.getElementById("myText").style.left = document.getElementById("myText").style.left+10;
-		document.getElementById("myText").style.top = document.getElementById("myText").style.top+10;
-		sleep(1000); // 1000ミリ秒スリープする
+		var n = document.getElementById("myText").style.left;
+		document.getElementById("myText").style.left = n+10;
+		//sleep(1000); // 1000ミリ秒スリープする
 	}
 	
 	
