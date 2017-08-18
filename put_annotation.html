@@ -37,7 +37,9 @@ window.onload=function(){
 		document.getElementById("res").value = r;
 
 //		file.Write(r);
-		tweet(r);
+		if(mY>0){
+			tweet(r);
+		}
 		
 		
 	});
