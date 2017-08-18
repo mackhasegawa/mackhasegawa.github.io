@@ -48,8 +48,8 @@ window.onload=function(){
 		if(mY>0){
 			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
 			document.getElementById("fusen").value = document.getElementById("annotation").value;
-			document.getElementById("fusen").style.Left = mX;
-			document.getElementById("fusen").style.Top = mY;
+			document.getElementById('myText').style.Left = mX;
+			document.getElementById('myText').style.Top = mY;
 			tweet(r);
 		}
 		
