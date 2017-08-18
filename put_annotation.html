@@ -14,7 +14,7 @@ Y座標：<input type="text" id="txtY" /><br>
 
 
 <div id="myText" style="POSITION: absolute; Z-INDEX: 2; VISIBILITY: visible; TOP: -1000px; LEFT: 0px;">
-<input type="text" id="fusen" />
+<input type="text" size="40" id="fusen" />
 </div> 
 	
 <script type="text/javascript">
@@ -44,7 +44,6 @@ window.onload=function(){
 		if(mY>0){
 			m = document.getElementById("annotation").value;
 			document.getElementById("fusen").value = m;
-			document.getElementById("fusen").size = m.length+10;
 			document.getElementById("myText").style.left = mX;
 			document.getElementById("myText").style.top = mY;
 			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
