@@ -44,7 +44,7 @@ window.onload=function(){
 		if(mY>0){
 			m = document.getElementById("annotation").value;
 			document.getElementById("fusen").value = m;
-			document.getElementById("fusen").size = m.length;
+			document.getElementById("fusen").size = m.length.toString();
 			document.getElementById("myText").style.left = mX;
 			document.getElementById("myText").style.top = mY;
 			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
