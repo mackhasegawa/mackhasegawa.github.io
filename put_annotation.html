@@ -14,9 +14,6 @@ Y座標：<input type="text" id="txtY" /><br>
 <script type="text/javascript">
 <!--
   
-//var fs = WScript.CreateObject("Scripting.FileSystemObject");
-//var file = fs.OpenTextFile("log.txt", 8);
-
 window.onload=function(){
 	//マウス移動時のイベントをBODYタグに登録する
 	document.body.addEventListener("click", function(e){
@@ -36,7 +33,6 @@ window.onload=function(){
 		r = r.concat("\n");
 		document.getElementById("res").value = r;
 
-//		file.Write(r);
 		if(mY>0){
 			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
 			tweet(r);
@@ -46,12 +42,10 @@ window.onload=function(){
 	});
 }
 
-//file.Close();
-  
-  function tweet(r){
-	  var result = r;
-	  location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=annotation";
-  }
+function tweet(r){
+	var result = r;
+	location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=annotation";
+}
 
 // -->
 </script>
