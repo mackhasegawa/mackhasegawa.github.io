@@ -1,67 +1,28 @@
 <html>
 <head>
-<title>付箋の添付（モネ：日傘の女）</title>
+<title>付箋の表示（モネ：日傘の女）</title>
 
 </head>
 <body>
 
-<input type="text" id="annotation" size="80" value="ここにコメントを入れて添付場所をクリックしてください．" /><br>
 <img src="2017081800.png"><br>
-X座標：<input type="text" id="txtX" />
-Y座標：<input type="text" id="txtY" /><br>	
-結果：<input type="text" size="80" id="res" /><br>	
 
-
-
-<div id="myText" style="POSITION: absolute; Z-INDEX: 2; VISIBILITY: visible; TOP: -1000px; LEFT: 0px;">
+<div id="myText" style="POSITION: absolute; Z-INDEX: 2; VISIBILITY: visible; TOP: 100px; LEFT: 0px;">
 <input type="text" size="40" id="fusen" />
 </div> 
 	
 <script type="text/javascript">
 <!--
-
-var file_name = "日傘の女";
+	while(true){
+		document.getElementById("fusen").value = "付箋データ";
+		document.getElementById("myText").style.left = document.getElementById("myText").style.left+10;
+		document.getElementById("myText").style.top = document.getElementById("myText").style.top+10;
+		sleep(1000); // 1000ミリ秒スリープする
+	}
 	
-window.onload=function(){
-	//マウス移動時のイベントをBODYタグに登録する
-	document.body.addEventListener("click", function(e){
-		// 座標のオフセット
-		var offsetX = 8;
-		var offsetY = 32;
-		//座標を取得する
-		var mX = e.pageX-offsetX;  //X座標
-		var mY = e.pageY-offsetY;  //Y座標
-		//座標を表示する
-		document.getElementById("txtX").value = mX;
-		document.getElementById("txtY").value = mY;
-		var r = mX.toString().concat(",");
-		r = r.concat(mY.toString());
-		r = r.concat(",");
-		r = r.concat(document.getElementById("annotation").value);
-		r = r.concat("\n");
-		document.getElementById("res").value = r;
+	
+	
 
-		if(mY>0){
-			m = document.getElementById("annotation").value;
-			document.getElementById("fusen").value = m;
-			document.getElementById("myText").style.left = mX;
-			document.getElementById("myText").style.top = mY;
-			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
-			tweet(r);
-		}
-		
-		
-	});
-}
-
-function tweet(r){
-	var result = r;
-	var tag = "&hashtags=TDU_hasegawaLAB_annotation_";
-	tag = tag.concat(file_name);
-	//location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=TDU_hasegawaLAB_annotation";
-	window.open("https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +tag);
-
-}
 
 // -->
 </script>
