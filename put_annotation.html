@@ -37,7 +37,7 @@ window.onload=function(){
 		document.getElementById("res").value = r;
 
 //		file.Write(r);
-		tweet();
+		tweet(r);
 		
 		
 	});
@@ -45,9 +45,9 @@ window.onload=function(){
 
 //file.Close();
   
-  function tweet(){
-	  var result = "こんばんは";
-	  location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=abc";
+  function tweet(r){
+	  var result = r;
+	  location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=annotation";
   }
 
 // -->
