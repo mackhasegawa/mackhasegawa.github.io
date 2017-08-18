@@ -37,13 +37,19 @@ window.onload=function(){
 		document.getElementById("res").value = r;
 
 //		file.Write(r);
+		tweet();
+		
 		
 	});
 }
 
 //file.Close();
   
-  
+  function tweet(){
+	  var result = "こんばんは";
+	  location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=abc";
+  }
+
 // -->
 </script>
 	
