@@ -42,10 +42,10 @@ window.onload=function(){
 		document.getElementById("res").value = r;
 
 		if(mY>0){
-			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
 			document.getElementById("fusen").value = document.getElementById("annotation").value;
 			document.getElementById("myText").style.left = mX;
 			document.getElementById("myText").style.top = mY;
+			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
 			tweet(r);
 		}
 		
