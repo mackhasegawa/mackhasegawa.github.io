@@ -11,16 +11,11 @@ X座標：<input type="text" id="txtX" />
 Y座標：<input type="text" id="txtY" /><br>	
 結果：<input type="text" size="80" id="res" /><br>	
 <input type="text" size="80" id="fusen" />
-<style type="text/css"><!--
-#myText {
-position:absolute;
-top: 400px;
-left: 100px;
-}
---></style>
-<div id="myText">
+
+
+<div id="myText" style="POSITION: absolute; Z-INDEX: 2; VISIBILITY: visible; TOP: 150px; LEFT: 100px; width:1;"">
 付箋のコメント
-</div>
+</div> 
 	
 <script type="text/javascript">
 <!--
@@ -49,8 +44,8 @@ window.onload=function(){
 		if(mY>0){
 			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
 			document.getElementById("fusen").value = document.getElementById("annotation").value;
-			document.getElementById('myText').style.pixelLeft = mX;
-			document.getElementById('myText').style.pixelTop = mY;
+			document.getElementById("myText").style.pixelLeft = mX;
+			document.getElementById("myText").style.pixelTop = mY;
 			tweet(r);
 		}
 		
