@@ -13,7 +13,9 @@ Y座標：<input type="text" id="txtY" /><br>
 	
 <script type="text/javascript">
 <!--
-  
+
+var file_name = "モネ：日傘の女";
+	
 window.onload=function(){
 	//マウス移動時のイベントをBODYタグに登録する
 	document.body.addEventListener("click", function(e){
@@ -44,8 +46,10 @@ window.onload=function(){
 
 function tweet(r){
 	var result = r;
+	var tag = "&hashtags=TDU_hasegawaLAB_annotation_";
+	tag = tag.concat(file_name);
 	//location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=TDU_hasegawaLAB_annotation";
-	window.open("https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=TDU_hasegawaLAB_annotation");
+	window.open("https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +tag);
 
 }
 
