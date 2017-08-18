@@ -18,7 +18,7 @@ left: 100px;
 }
 --></style>
 <div id="myText">
-この文字が移動します。
+付箋のコメント
 </div>
 	
 <script type="text/javascript">
@@ -47,7 +47,7 @@ window.onload=function(){
 
 		if(mY>0){
 			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
-			document.getElementById("fusen").value = document.getElementById("annotation").value;
+			document.getElementById("myText").value = document.getElementById("annotation").value;
 			document.getElementById("myText").style.Left = mX;
 			document.getElementById("myText").style.Top = mY;
 			tweet(r);
