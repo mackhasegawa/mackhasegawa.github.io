@@ -10,20 +10,14 @@
          function init() {
             alert("ページが読み込まれました");
          }
-         /* onunloadイベントが発生した時に行う処理を記述 */
-         function init2() {
-            alert("ページがアンロードされました");
-         }
       </script>
    <link rel="stylesheet" type="text/css" href="/common/css/example.css"></head>
-   <body onload="init()" onunload="init2()">
+   <body onload="init()">
       <p>
-         ページの読み込み完了時に、onLoadイベントが発生します。<br>
-         ページを閉じた時やリロード（更新）した時に、onUnloadイベントが発生します。
+         ページの読み込み完了時に、onLoadイベントが発生します。
       </p>
       <p>
          <input type="button" value="リロード(更新）する" onclick="window.location.reload()" />
-         <input type="button" value="閉じる" onclick="self.close()" />
       </p>
    </body>
 </html>
