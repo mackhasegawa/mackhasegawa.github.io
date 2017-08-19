@@ -19,49 +19,47 @@ Y座標：<input type="text" id="txtY" /><br>
 	
 <script type="text/javascript">
 <!--
+	var file_name = "日傘の女";
+	window.onload=function(){
+		//マウス移動時のイベントをBODYタグに登録する
+		document.body.addEventListener("click", function(e){
+			// 座標のオフセット
+			var offsetX = 8;
+			var offsetY = 32;
+			//座標を取得する
+			var mX = e.pageX-offsetX;  //X座標
+			var mY = e.pageY-offsetY;  //Y座標
+			//座標を表示する
+			document.getElementById("txtX").value = mX;
+			document.getElementById("txtY").value = mY;
+			var r = mX.toString().concat(",");
+			r = r.concat(mY.toString());
+			r = r.concat(",");
+			r = r.concat(document.getElementById("annotation").value);
+			r = r.concat("\n");
+			document.getElementById("res").value = r;
 
-var file_name = "日傘の女";
-	
-window.onload=function(){
-	//マウス移動時のイベントをBODYタグに登録する
-	document.body.addEventListener("click", function(e){
-		// 座標のオフセット
-		var offsetX = 8;
-		var offsetY = 32;
-		//座標を取得する
-		var mX = e.pageX-offsetX;  //X座標
-		var mY = e.pageY-offsetY;  //Y座標
-		//座標を表示する
-		document.getElementById("txtX").value = mX;
-		document.getElementById("txtY").value = mY;
-		var r = mX.toString().concat(",");
-		r = r.concat(mY.toString());
-		r = r.concat(",");
-		r = r.concat(document.getElementById("annotation").value);
-		r = r.concat("\n");
-		document.getElementById("res").value = r;
-
-		if(mY>0){
-			m = document.getElementById("annotation").value;
-			document.getElementById("fusen").value = m;
-			document.getElementById("myText").style.left = mX;
-			document.getElementById("myText").style.top = mY;
-			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
-			tweet(r);
-		}
+			if(mY>0){
+				m = document.getElementById("annotation").value;
+				document.getElementById("fusen").value = m;
+				document.getElementById("myText").style.left = mX;
+				document.getElementById("myText").style.top = mY;
+				document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
+				tweet(r);
+			}
 		
 		
-	});
-}
+		});
+	}
 
-function tweet(r){
-	var result = r;
-	var tag = "&hashtags=TDU_hasegawaLAB_annotation_";
-	tag = tag.concat(file_name);
-	//location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=TDU_hasegawaLAB_annotation";
-	window.open("https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +tag);
+	function tweet(r){
+		var result = r;
+		var tag = "&hashtags=TDU_hasegawaLAB_annotation_";
+		tag = tag.concat(file_name);
+		//location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=TDU_hasegawaLAB_annotation";
+		window.open("https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +tag);
 
-}
+	}
 
 // -->
 </script>
