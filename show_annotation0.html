@@ -17,9 +17,9 @@
 		alert("ページが読み込まれました");
 		document.getElementById("fusen").value = "付箋";
 		for(var i = 0; i < 100; i++)
-			//document.getElementById("fusen").value = i.toString();
+			document.getElementById("fusen").value = i.toString();
 			document.getElementById("myText").style.left = 100+10*i;
-			//sleep(1000); // 1000ミリ秒スリープする
+			sleep(1000); // 1000ミリ秒スリープする
 		}
 	}
 	
