@@ -2,13 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <title>JavaScript: onloadイベント、onunloadイベント</title>
+      <title>付箋の表示（モネ：日傘の女）</title>
       <meta http-equiv="Content-Language" content="ja" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <script type="text/javascript">
          /* onloadイベント発生した時に行う処理を記述 */
          function init() {
             alert("ページが読み込まれました");
+            document.getElementById("fusen").value = "付箋";
+		      for(var i = 0; i < 100; i++)
+			      document.getElementById("fusen").value = i.toString();
+			      document.getElementById("myText").style.left = 100+10*i;
+			      sleep(1000); // 1000ミリ秒スリープする
+		      }
          }
       </script>
    <link rel="stylesheet" type="text/css" href="/common/css/example.css"></head>
