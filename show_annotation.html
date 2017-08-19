@@ -13,7 +13,13 @@
 		      for(var i = 0; i < 100; i++){
 			      document.getElementById("fusen").value = i;
 			      document.getElementById("myText").style.left = 100+i;
-			      sleep(100); // 1000ミリ秒スリープする
+			      const d1 = new Date();
+				while (true) {
+  					const d2 = new Date();
+  					if (d2 - d1 > 100) {
+    						break;
+  					}
+				}
 		      }
          }
       </script>
