@@ -17,8 +17,8 @@
             alert("ページが読み込まれました");
             document.getElementById("fusen").value = "付箋";
 		      for(var i = 0; i < 10; i++){
-			      px = px + 10;
-			      setTimeout("document.getElementById("fusen").value = px",100);
+			      setTimeout("px = px + 10",100);
+			      document.getElementById("fusen").value = px;
 			      //setTimeout("move()",100);
 		      }
          }
