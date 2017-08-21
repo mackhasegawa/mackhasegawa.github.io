@@ -10,15 +10,15 @@
 	      var py = 100;
 	      function move(){
 		      px = px + 10;
-		      //document.getElementById("fusen").value = px;
-		      //document.getElementById("myText").style.left = px;
-		      //setTimeout("move()",100);
+		      document.getElementById("fusen").value = px;
+		      document.getElementById("myText").style.left = px;
+		      setTimeout("move()",100);
 	      }
 	      
          /* onloadイベント発生した時に行う処理を記述 */
          function init() {
             alert("ページが読み込まれました");
-            //move();
+            move();
          }
       </script>
    <link rel="stylesheet" type="text/css" href="/common/css/example.css"></head>
