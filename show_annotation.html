@@ -9,8 +9,6 @@
 	      var px = 100;
 	      var py = 100;
 	      move(){
-		      px = px + 10;
-		      document.getElementById("fusen").value = px;
 		      document.getElementById("myText").style.left = px;
 	      }
 	      
@@ -19,7 +17,8 @@
             alert("ページが読み込まれました");
             document.getElementById("fusen").value = "付箋";
 		      for(var i = 0; i < 10; i++){
-			      aleart(i);
+			      px = px + 10;
+			      document.getElementById("fusen").value = px;
 			      setTimeout("move()",100);
 		      }
          }
