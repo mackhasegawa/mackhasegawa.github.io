@@ -10,7 +10,7 @@
 	      var tx = ["風が吹いている","顔が描かれていない","タッチがよい","色がやわらか","ブルーがきれい"];
 	      var n;
 	      function move(){
-		      n = Math.floor(Math.random());
+		      n = Math.floor(Math.random()*1000);
 		      document.getElementById("fusen").value = tx[n%5];
 		      document.getElementById("myText").style.left = px[n%5];
 		      document.getElementById("myText").style.top = py[n%5];
