@@ -6,21 +6,17 @@
       <meta http-equiv="Content-Language" content="ja" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <script type="text/javascript">
+	      move(t){
+		      document.getElementById("fusen").value = t;
+		      document.getElementById("myText").style.left = 100+t*10;
+	      }
+	      
          /* onloadイベント発生した時に行う処理を記述 */
          function init() {
             alert("ページが読み込まれました");
             document.getElementById("fusen").value = "付箋";
 		      for(var i = 0; i < 10; i++){
-			      document.getElementById("fusen").value = i;
-			      document.getElementById("myText").style.left = 100+i*10;
-			      const d1 = new Date();
-				while (true) {
-  					const d2 = new Date();
-  					if (d2 - d1 > 100) {
-    						break;
-  					}
-				}
-			      alert("次のステップ．");
+			      setTimeout("move(i)",100);
 		      }
          }
       </script>
