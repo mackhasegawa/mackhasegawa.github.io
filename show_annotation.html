@@ -5,16 +5,16 @@
       <meta http-equiv="Content-Language" content="ja" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <script type="text/javascript">
-	      var px = 100;
-	      var py = 100;
+	      var px = [43,330,483,352,30];
+	      var py = [383,166,509,751,462];
 	      var tx = ["風が吹いている","顔が描かれていない","タッチがよい","色がやわらか","ブルーがきれい"];
 	      var n = -1;
 	      function move(){
 		      px = px + 10;
 		      n = n+1;
 		      document.getElementById("fusen").value = tx[n%5];
-		      document.getElementById("myText").style.left = px;
-		      document.getElementById("myText").style.top = py;
+		      document.getElementById("myText").style.left = px[n%5];
+		      document.getElementById("myText").style.top = py[n%5];
 		      setTimeout("move()",3000);
 	      }
 	      
