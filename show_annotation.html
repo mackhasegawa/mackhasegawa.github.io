@@ -18,7 +18,7 @@
             document.getElementById("fusen").value = "付箋";
 		      for(var i = 0; i < 10; i++){
 			      px = px + 10;
-			      document.getElementById("fusen").value = px;
+			      setTimeout("document.getElementById("fusen").value = px",100);
 			      //setTimeout("move()",100);
 		      }
          }
