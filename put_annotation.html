@@ -43,9 +43,6 @@ Y座標：<input type="text" id="txtY" /><br>
 				document.getElementById("myText").style.left = mX;
 				document.getElementById("myText").style.top = mY;
 				document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
-				
-				appendLine("C:\Users\hasegawa\Desktop\log.txt","追加行1行目");
-				
 				tweet(r);
 			}
 		
@@ -61,38 +58,6 @@ Y座標：<input type="text" id="txtY" /><br>
 		window.open("https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +tag);
 
 	}
-
-	
-	
-
-	// http://msdn.microsoft.com/ja-jp/library/cc428044.aspx
-	// OpenTextFile メソッド
-	var forReading, forWriting, forAppending
-	var tristateUseDefault, tristateTrue, tristateFalse
-	//第2引数　ファイル入出力モード
-	forReading   = 1;
-	forWriting   = 2;
-	forAppending = 8;
-	//第3引数　ファイルが存在しない場合新規ファイルを作成するか否か（省略時は否:false）
-	//第4引数　ファイル形式（省略時は、0）
-	tristateUseDefault = -2;   //システムデフォルト(Shift_JIS)
-	tristateTrue       = -1;   //Unicodeファイル
-	tristateFalse      =  0;   //ASCII 
-
-	function appendLine(filename, first) {
-		var fso = new ActiveXObject('Scripting.FileSystemObject');
-	//	var file = fso.OpenTextFile(filename, forAppending, true, tristateUseDefault);
-	//	file.WriteLine(first);
-		file.Close();
-		alert("書き込み終了");
-	}
-	
-	
-	
-	
-	
-	
-	
 	
 // -->
 </script>
