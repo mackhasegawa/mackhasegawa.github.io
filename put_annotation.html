@@ -17,6 +17,7 @@ Y座標：<input type="text" id="txtY" /><br>
 	
 <script type="text/javascript">
 <!--
+	var file;
 	var file_name = "日傘の女";
 	window.onload=function(){
 		//マウス移動時のイベントをBODYタグに登録する
@@ -44,8 +45,8 @@ Y座標：<input type="text" id="txtY" /><br>
 				document.getElementById("myText").style.top = mY;
 				document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
 				
-				file = 'C:\\Users\\hasegawa\\Desktop\\log.txt'
-				appendLine(file, '追加行1行目', '追加行2行目');
+				file = "C:\\Users\\hasegawa\\Desktop\\log.txt";
+				appendLine(file,"追加行1行目", "追加行2行目");
 				
 				tweet(r);
 			}
@@ -64,7 +65,7 @@ Y座標：<input type="text" id="txtY" /><br>
 	}
 
 	
-	var file;
+	
 
 	// http://msdn.microsoft.com/ja-jp/library/cc428044.aspx
 	// OpenTextFile メソッド
@@ -85,7 +86,7 @@ Y座標：<input type="text" id="txtY" /><br>
 		var file = fso.OpenTextFile(filename, forWriting, true, tristateUseDefault);
 		file.Write(content);
 		file.Close();
-		alert('書き込み終了');
+		alert("書き込み終了");
 	}
 
 	function appendLine(filename, first, second) {
@@ -94,7 +95,7 @@ Y座標：<input type="text" id="txtY" /><br>
 		file.WriteLine(first);
 		file.WriteLine(second);
 		file.Close();
-		alert('書き込み終了');
+		alert("書き込み終了");
 	}
 	
 	
