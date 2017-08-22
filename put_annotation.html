@@ -45,8 +45,8 @@ Y座標：<input type="text" id="txtY" /><br>
 				document.getElementById("myText").style.top = mY;
 				document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
 				
-				file = "C:\\Users\\hasegawa\\Desktop\\log.txt";
-				appendLine(file,"追加行1行目", "追加行2行目");
+				file = "C:\Users\hasegawa\Desktop\log.txt";
+				appendLine(file,"追加行1行目");
 				
 				tweet(r);
 			}
@@ -89,11 +89,10 @@ Y座標：<input type="text" id="txtY" /><br>
 		alert("書き込み終了");
 	}
 
-	function appendLine(filename, first, second) {
+	function appendLine(filename, first) {
 		var fso = new ActiveXObject('Scripting.FileSystemObject');
 		var file = fso.OpenTextFile(filename, forAppending, true, tristateUseDefault);
 		file.WriteLine(first);
-		file.WriteLine(second);
 		file.Close();
 		alert("書き込み終了");
 	}
