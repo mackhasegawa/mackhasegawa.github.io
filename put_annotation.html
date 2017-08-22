@@ -81,7 +81,7 @@ Y座標：<input type="text" id="txtY" /><br>
 	tristateFalse      =  0;   //ASCII 
 
 	function appendLine(filename, first) {
-		var fso = new ActiveXObject("Scripting.FileSystemObject");
+		var fso = new ActiveXObject('Scripting.FileSystemObject');
 		var file = fso.OpenTextFile(filename, forAppending, true, tristateUseDefault);
 	//	file.WriteLine(first);
 		file.Close();
