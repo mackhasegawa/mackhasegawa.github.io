@@ -25,13 +25,14 @@
 			 var reader = new FileReader();
 			 reader.readAsText(file[0]);
 			 reader.onload = function(ev){
-//				 alert(reader.result);
+				 alert(reader.result);
+				 ln = reader.result.split("\n");
+				 alert(ln[0]);
+				 w = ln[0].split(",");
+				 alert(w[0]);
 			 }
 		 },false);
-		ln = reader.result.split("\n");
-	   	alert(ln[0]);
-//		w = ln[0].split(",");
-//		 alert(w[0]);
+
 
 
          }
