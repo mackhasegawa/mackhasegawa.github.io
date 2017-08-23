@@ -5,15 +5,16 @@
       <meta http-equiv="Content-Language" content="ja" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <script type="text/javascript">
-	      var px = [0,0,0,0,0];
-	      var py = [-1000,-1000,-1000,-1000,-1000];
-	      var tx = ["1","2","3","4","5"];
+	      var an;
+	      var px = new Array(100);
+	      var py = new Array(100);
+	      var tx = new Array(100);
 	      var n;
 	      function move(){
 		      n = Math.floor(Math.random()*1000);
-		      document.getElementById("fusen").value = tx[n%5];
-		      document.getElementById("myText").style.left = px[n%5];
-		      document.getElementById("myText").style.top = py[n%5];
+		      document.getElementById("fusen").value = tx[n%an];
+		      document.getElementById("myText").style.left = px[n%an];
+		      document.getElementById("myText").style.top = py[n%an];
 		      setTimeout("move()",1000);
 	      }
 	      
@@ -27,7 +28,8 @@
 			 reader.onload = function(ev){
 				 alert(reader.result);
 				 ln = reader.result.split("\n");
-				 for(var i = 0; i < ln.length; i++) {
+				 an = ln.length;
+				 for(var i = 0; i < an; i++) {
 				 	w = ln[i].split(",");
 				 	px[i] = w[0];
 					py[i] = w[1];
