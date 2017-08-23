@@ -9,9 +9,8 @@
 <img src="2017081800.png"><br>
 X座標：<input type="text" id="txtX" />
 Y座標：<input type="text" id="txtY" /><br>	
-//結果：<input type="text" size="80" id="res" /><br>
 <FORM NAME="results"> 
-	<TEXTAREA NAME="msg" ROWS="80" COLS="$">結果</TEXTAREA>
+	<TEXTAREA NAME="msg" ROWS="10" COLS="80">結果</TEXTAREA>
 </FORM></br>
 
 <div id="myText" style="POSITION: absolute; Z-INDEX: 2; VISIBILITY: visible; TOP: -1000px; LEFT: 0px;">
@@ -39,8 +38,9 @@ Y座標：<input type="text" id="txtY" /><br>
 			r = r.concat(",");
 			r = r.concat(document.getElementById("annotation").value);
 			r = r.concat("\n");
+			var tmp = document.results.msg.value;
+			r = tmp.concat(r);
 			document.results.msg.value = r;
-			//document.getElementById("res").value = r;
 
 			if(mY>0){
 				m = document.getElementById("annotation").value;
