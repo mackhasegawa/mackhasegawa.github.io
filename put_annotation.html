@@ -27,6 +27,7 @@ Y座標：<input type="text" id="txtY" /><br>
 			// 座標のオフセット
 			var offsetX = 8;
 			var offsetY = 32;
+			var maxY = 930;
 			//座標を取得する
 			var mX = e.pageX-offsetX;  //X座標
 			var mY = e.pageY-offsetY;  //Y座標
@@ -42,7 +43,7 @@ Y座標：<input type="text" id="txtY" /><br>
 			r = tmp.concat(r);
 			document.results.msg.value = r;
 
-			if(mY>0 && mY<930){
+			if(mY>0 && mY<maxY){
 				m = document.getElementById("annotation").value;
 				document.getElementById("fusen").value = m;
 				document.getElementById("myText").style.left = mX;
