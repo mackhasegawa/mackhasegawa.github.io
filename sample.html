@@ -26,26 +26,6 @@ var file = fs.OpenTextFile("C:\Users\hasegawa\Desktop\text.txt", 2, true, 0);
 file.Write("マルペケつくろ～だぜ！");
 file.Close();
 
-// 読み込み
-var file2 = fs.OpenTextFile("C:\Users\hasegawa\Desktop\text.txt", 1);
-var str = file2.ReadLine();
-WScript.Echo(str);
-file2.Close();
-
-// 指定文字数分だけ読み込み
-var file3 = fs.OpenTextFile("C:\Users\hasegawa\Desktop\text.txt", 1);
-str = file3.Read(3);
-WScript.Echo(str);
-file2.Close();
-
-// 文字数は日本語とASCIIを区別する？
-var file4 = fs.OpenTextFile("C:\Users\hasegawa\Desktop\text2.txt", 2, true, 0);
-file4.Write("あいうえお12345かきくけこ");
-file4.Close();
-var file5 = fs.OpenTextFile("C:\Users\hasegawa\Desktop\text2.txt", 1);
-str = file5.Read(7);
-WScript.Echo(str);
-file5.Close();
 
          }
       </script>
