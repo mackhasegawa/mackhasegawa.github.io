@@ -36,6 +36,7 @@ obj1.addEventListener("change",function(evt){
   reader.onload = function(ev){
     //テキストエリアに表示する
     document.test.txt.value = reader.result;
+	  aleart(reader.result);
   }
 },false);
 
