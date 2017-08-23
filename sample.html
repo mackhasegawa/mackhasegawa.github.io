@@ -35,7 +35,6 @@ obj1.addEventListener("change",function(evt){
   //読込終了後の処理
   reader.onload = function(ev){
     //テキストエリアに表示する
-    document.test.txt.value = reader.result;
 	  alert(reader.result);
   }
 },false);
@@ -50,7 +49,6 @@ obj1.addEventListener("change",function(evt){
 	   
 	   <form name="test">
 <input type="file" id="selfile"><br>
-<textarea name="txt" rows="10" cols="50" readonly></textarea>
 </form>
 
 	   
