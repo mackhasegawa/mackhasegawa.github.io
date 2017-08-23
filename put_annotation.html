@@ -31,7 +31,6 @@ Y座標：<input type="text" id="txtY" /><br>
 			//座標を取得する
 			var mX = e.pageX-offsetX;  //X座標
 			var mY = e.pageY-offsetY;  //Y座標
-			var pY = mY;
 			//座標を表示する
 			document.getElementById("txtX").value = mX;
 			document.getElementById("txtY").value = mY;
@@ -44,15 +43,13 @@ Y座標：<input type="text" id="txtY" /><br>
 			r = tmp.concat(r);
 			document.results.msg.value = r;
 
-			if(pY>0 && pY<maxY){
-				m = document.getElementById("annotation").value;
-				document.getElementById("fusen").value = m;
-				document.getElementById("myText").style.left = mX;
-				document.getElementById("myText").style.top = mY;
-				document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
-				//tweet(r);
-			}
-		
+			m = document.getElementById("annotation").value;
+			document.getElementById("fusen").value = m;
+			document.getElementById("myText").style.left = mX;
+			document.getElementById("myText").style.top = mY;
+			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
+			//tweet(r);
+	
 		
 		});
 	}
