@@ -7,7 +7,7 @@
       <script type="text/javascript">
 	      var px = [43,350,483,352,30];
 	      var py = [383,166,509,751,462];
-	      var tx = ["風が吹いている","顔が描かれていない","タッチがよい","色がやわらか","ブルーがきれい"];
+	      var tx = ["1","2","3","4","5"];
 	      var n;
 	      function move(){
 		      n = Math.floor(Math.random()*1000);
@@ -27,12 +27,15 @@
 			 reader.onload = function(ev){
 				 alert(reader.result);
 				 ln = reader.result.split("\n");
-				 alert(ln[0]);
-				 w = ln[0].split(",");
-				 alert(w[0]);
+				 for(var i = 0; i < 5; i++) {
+				 	w = ln[i].split(",");
+				 	px[i] = w[0];
+					py[i] = w[1];
+					tx[i] = w[2]:
+				 }
 			 }
 		 },false);
-
+		move();
 
 
          }
