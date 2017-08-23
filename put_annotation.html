@@ -10,7 +10,7 @@
 X座標：<input type="text" id="txtX" />
 Y座標：<input type="text" id="txtY" /><br>	
 <FORM NAME="results"> 
-	<TEXTAREA NAME="msg" ROWS="10" COLS="80">結果</TEXTAREA>
+	<TEXTAREA NAME="msg" ROWS="10" COLS="80"></TEXTAREA>
 </FORM></br>
 
 <div id="myText" style="POSITION: absolute; Z-INDEX: 2; VISIBILITY: visible; TOP: -1000px; LEFT: 0px;">
@@ -48,7 +48,7 @@ Y座標：<input type="text" id="txtY" /><br>
 				document.getElementById("myText").style.left = mX;
 				document.getElementById("myText").style.top = mY;
 				document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
-				tweet(r);
+				//tweet(r);
 			}
 		
 		
