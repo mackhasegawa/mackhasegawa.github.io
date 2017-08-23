@@ -48,7 +48,7 @@ Y座標：<input type="text" id="txtY" /><br>
 			document.getElementById("myText").style.left = mX;
 			document.getElementById("myText").style.top = mY;
 			document.getElementById("annotation").value = "ここにコメントを入れて添付場所をクリックしてください．";
-			//tweet(r);
+			tweet(r);
 	
 		
 		});
@@ -59,7 +59,7 @@ Y座標：<input type="text" id="txtY" /><br>
 		var tag = "&hashtags=TDU_hasegawaLAB_annotation_";
 		tag = tag.concat(file_name);
 		//location.href = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +"&hashtags=TDU_hasegawaLAB_annotation";
-		window.open("https://twitter.com/intent/tweet?text="+ encodeURIComponent(result) +tag);
+		window.open("https://twitter.com/intent/tweet?in_reply_to=ツイートID&text="+ encodeURIComponent(result) +tag);
 
 	}
 	
