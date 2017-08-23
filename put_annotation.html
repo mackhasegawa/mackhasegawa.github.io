@@ -10,10 +10,7 @@
 X座標：<input type="text" id="txtX" />
 Y座標：<input type="text" id="txtY" /><br>	
 結果：<input type="text" size="80" id="res" /><br>
-<form name="test">
-	ログファイルを選択してください：<br>
-	<input type="file" id="selfile"><br>
-</form><br>
+<button id="btndownload">ファイル作成</button>
 
 <div id="myText" style="POSITION: absolute; Z-INDEX: 2; VISIBILITY: visible; TOP: -1000px; LEFT: 0px;">
 <input type="text" size="40" id="fusen" />
@@ -22,16 +19,18 @@ Y座標：<input type="text" id="txtY" /><br>
 <script type="text/javascript">
 <!--
 	var file_name = "日傘の女";
-	var obj1 = document.getElementById("selfile");
-	obj1.addEventListener("change",function(evt){
-		var file = evt.target.files;
-		var reader = new FileReader();
-		reader.readAsText(file[0]);
-		reader.onload = function(ev){
-			alert(reader.result);
-		}
-	},false);
 	
+	document.getElementById("btndownload").addEventListener("click", function () {
+		var text = document.getElementById("text").value;
+		var blobBuilder;
+		if ("MozBlobBuilder" in window) {
+			blobBuilder = new MozBlobBuilder();
+		} else if ("WebKitBlobBuilder" in window) {
+			blobBuilder = new WebKitBlobBuilder();
+		}
+		blobBuilder.append("あいうえお\n");
+	}
+		
 	window.onload=function(){
 		//マウス移動時のイベントをBODYタグに登録する
 		document.body.addEventListener("click", function(e){
