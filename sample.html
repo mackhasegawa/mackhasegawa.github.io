@@ -20,17 +20,39 @@
          /* onloadイベント発生した時に行う処理を記述 */
          function init() {
          
-            // 新規ファイル作成
-var fs = WScript.CreateObject("Scripting.FileSystemObject");
-var file = fs.OpenTextFile("C:\Users\hasegawa\Desktop\text.txt", 2, true, 0);
-file.Write("マルペケつくろ～だぜ！");
-file.Close();
+var obj1 = document.getElementById("selfile");
+
+//ダイアログでファイルが選択された時
+obj1.addEventListener("change",function(evt){
+
+  var file = evt.target.files;
+
+  //FileReaderの作成
+  var reader = new FileReader();
+  //テキスト形式で読み込む
+  reader.readAsText(file[0]);
+  
+  //読込終了後の処理
+  reader.onload = function(ev){
+    //テキストエリアに表示する
+    document.test.txt.value = reader.result;
+  }
+},false);
+
+	   
 
 
          }
       </script>
    <link rel="stylesheet" type="text/css" href="/common/css/example.css"></head>
    <body onload="init()">
+	   
+	   <form name="test">
+<input type="file" id="selfile"><br>
+<textarea name="txt" rows="10" cols="50" readonly></textarea>
+</form>
+
+	   
       <img src="2017081800.png"><br>
       <div id="myText" style="POSITION: absolute; Z-INDEX: 2; VISIBILITY: visible; TOP: 0px; LEFT: 0px;">
          <input type="text" size="20" id="fusen" />
