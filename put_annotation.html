@@ -5,7 +5,6 @@
 </head>
 <body>
 
-<button id="btndownload">ファイル作成</button>
 <input type="text" id="annotation" size="80" value="ここにコメントを入れて添付場所をクリックしてください．" /><br>
 <img src="2017081800.png"><br>
 X座標：<input type="text" id="txtX" />
@@ -20,17 +19,6 @@ Y座標：<input type="text" id="txtY" /><br>
 <script type="text/javascript">
 <!--
 	var file_name = "日傘の女";
-	
-	document.getElementById("btndownload").addEventListener("click", function () {
-		var text = document.getElementById("text").value;
-		var blobBuilder;
-		if ("MozBlobBuilder" in window) {
-			blobBuilder = new MozBlobBuilder();
-		} else if ("WebKitBlobBuilder" in window) {
-			blobBuilder = new WebKitBlobBuilder();
-		}
-		blobBuilder.append("あいうえお\n");
-	}, false);
 		
 	window.onload=function(){
 		//マウス移動時のイベントをBODYタグに登録する
