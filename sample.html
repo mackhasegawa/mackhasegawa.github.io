@@ -27,7 +27,7 @@
 			 reader.onload = function(ev){
 				 alert(reader.result);
 				 ln = reader.result.split("\n");
-				 for(var i = 0; i < 5; i++) {
+				 for(var i = 0; i < ln.length; i++) {
 				 	w = ln[i].split(",");
 				 	px[i] = w[0];
 					py[i] = w[1];
