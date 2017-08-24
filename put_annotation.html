@@ -68,8 +68,11 @@ Y座標：<input type="text" id="txtY" /><br>
 	function img_set(code){
 		//エンターキー押下なら
 		if(13 === code){
-			alert("エンターキーが押されたよ！");
 			document.getElementById("gazo").src = document.getElementById("im_url").value;
+			var msg = document.getElementById("im_url").value;
+			msg = msg.concat("\n");
+			msg = msg.concat(document.results.msg.value);
+			document.results.msg.value = msg;
 		}
 	}
 // -->
