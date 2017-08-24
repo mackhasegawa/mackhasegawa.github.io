@@ -29,6 +29,7 @@
 				 alert(reader.result);
 				 ln = reader.result.split("\n");
 				 an = ln.length;
+				 document.getElementById("gazo").src = ln[0];
 				 for(var i = 1; i < an; i++) {
 				 	w = ln[i].split(",");
 				 	px[i] = w[0];
