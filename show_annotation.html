@@ -28,13 +28,13 @@
 			 reader.onload = function(ev){
 				 alert(reader.result);
 				 ln = reader.result.split("\n");
-				 an = ln.length;
+				 an = ln.length-1;
 				 document.getElementById("gazo").src = ln[0];
-				 for(var i = 1; i < an; i++) {
-				 	w = ln[i].split(",");
-				 	px[i] = w[0];
-					py[i] = w[1];
-					tx[i] = w[2];
+				 for(var i = 1; i < an+1; i++) {
+				 	w = ln[i+1].split(",");
+				 	px[i-1] = w[0];
+					py[i-1] = w[1];
+					tx[i-1] = w[2];
 				 }
 			 }
 		 },false);
